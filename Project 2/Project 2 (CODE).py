@@ -41,13 +41,13 @@ def rules():
 
 date = str(datetime.datetime.now())[:10]
 time = str(datetime.datetime.now())[11:19]
-sqldb = mysql.connector.connect(host='localhost', user='root', passwd='kapil2006@')
+sqldb = mysql.connector.connect(host='localhost', user='root', passwd='kapil2006@_MYSQL')
 csr = sqldb.cursor()
 try:
-    csr.execute('use cs_project')
+    csr.execute('use Project_2_database')
 except mysql.connector.errors.ProgrammingError:
-    csr.execute('create database cs_project')
-    csr.execute('use cs_project')
+    csr.execute('create database Project_2_database')
+    csr.execute('use Project_2_database')
 while True:
     print('''\nwelcome!!
 
